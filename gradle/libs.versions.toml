@@ -37,7 +37,7 @@ androidx-test-ext-junit = { group = "androidx.test.ext", name = "junit", version
 androidx-test-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "androidx-test-espresso-core" }
 
 [plugins]
-android-application = { id = "com.android.application", version = "8.1.1" }
+android-application = { id = "com.android.application", version = "8.9.1" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version = "1.9.10" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Trip Information" />
+
+    <!-- Destination -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Destination" />
+
+    <EditText
+        android:id="@+id/et_destination"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter destination" />
+
+    <TextView
+        android:id="@+id/tv_error_destination"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <!-- Days -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Number of Days"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:id="@+id/et_days"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter days"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/tv_error_days"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <!-- Budget -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Daily Budget"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:id="@+id/et_budget"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter budget"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:id="@+id/tv_error_budget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <!-- Button -->
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        android:layout_marginTop="32dp" />
+
+</LinearLayout>
