@@ -10,19 +10,19 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Trip Information" />
+        android:text="Dados da Viagem" />
 
-    <!-- Destination -->
+    <!-- Destino -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Destination" />
+        android:text="Destino" />
 
     <EditText
         android:id="@+id/et_destination"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter destination" />
+        android:hint="Escreva o Destino" />
 
     <TextView
         android:id="@+id/tv_error_destination"
@@ -30,18 +30,18 @@
         android:layout_height="wrap_content"
         android:visibility="gone" />
 
-    <!-- Days -->
+    <!-- Dias -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Number of Days"
+        android:text="Dias"
         android:layout_marginTop="16dp" />
 
     <EditText
         android:id="@+id/et_days"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter days"
+        android:hint="Digite o Numero de Dias"
         android:inputType="number" />
 
     <TextView
@@ -50,18 +50,18 @@
         android:layout_height="wrap_content"
         android:visibility="gone" />
 
-    <!-- Budget -->
+    <!-- Orcamento -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Daily Budget"
+        android:text="Orçamento Diário"
         android:layout_marginTop="16dp" />
 
     <EditText
         android:id="@+id/et_budget"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter budget"
+        android:hint="Digite o Orçamento"
         android:inputType="numberDecimal" />
 
     <TextView
@@ -70,12 +70,12 @@
         android:layout_height="wrap_content"
         android:visibility="gone" />
 
-    <!-- Button -->
+    <!-- Botao -->
     <Button
         android:id="@+id/btn_next"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Next"
+        android:text="Próximo"
         android:layout_marginTop="32dp" />
 
 </LinearLayout>

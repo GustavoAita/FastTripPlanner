@@ -24,23 +24,20 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Restore saved state if available
+        // retorna estado
         if (savedInstanceState != null) {
             binding.etDestination.setText(savedInstanceState.getString(KEY_DESTINATION, ""))
             binding.etDays.setText(savedInstanceState.getString(KEY_DAYS, ""))
             binding.etBudget.setText(savedInstanceState.getString(KEY_BUDGET, ""))
         }
 
-        // Set up click listener for Next button
+        // listener pro botao proximo
         binding.btnNext.setOnClickListener {
             validateAndProceed()
         }
     }
 
-    /**
-     * Validates all input fields
-     * PHASE 1: Just shows a toast if validation passes
-     */
+    // validador campos
     private fun validateAndProceed() {
         val destination = binding.etDestination.text.toString().trim()
         val daysStr = binding.etDays.text.toString().trim()
@@ -48,28 +45,28 @@ class MainActivity : AppCompatActivity() {
 
         hideAllErrors()
 
-        // Validate destination
+        // destino
         if (!isDestinationValid(destination)) {
             binding.tvErrorDestination.text = getString(R.string.error_empty_destination)
             binding.tvErrorDestination.visibility = View.VISIBLE
             return
         }
 
-        // Validate number of days
+        // dias
         if (!isDaysValid(daysStr)) {
             binding.tvErrorDays.text = getString(R.string.error_invalid_days)
             binding.tvErrorDays.visibility = View.VISIBLE
             return
         }
 
-        // Validate budget
+        // orcamento
         if (!isBudgetValid(budgetStr)) {
             binding.tvErrorBudget.text = getString(R.string.error_invalid_budget)
             binding.tvErrorBudget.visibility = View.VISIBLE
             return
         }
 
-        // All validations passed - show success message
+        // mensagem sucesso (teste)
         Toast.makeText(
             this,
             "Valid! Dest: $destination, Days: $daysStr, Budget: $budgetStr",
