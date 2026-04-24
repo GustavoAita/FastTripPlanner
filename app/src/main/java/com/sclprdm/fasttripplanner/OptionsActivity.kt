@@ -60,14 +60,6 @@ class OptionsActivity : AppCompatActivity() {
         }
     }
 
-
-    private fun showReceivedData() {
-        Toast.makeText(
-            this,
-            "Received: $destination, $days days, $$budget",
-            Toast.LENGTH_SHORT
-        ).show()
-    }
     private fun getSelectedAccommodation(): String {
         return when (binding.rgAccommodation.checkedRadioButtonId) {
             binding.rbEconomic.id -> Constants.ACCOMMODATION_TYPE_ECONOMIC
