@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".OptionsActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Opções de Viagem" />
+
+    <!-- Acomodação -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tipo de Acomodação"
+        android:layout_marginTop="16dp" />
+
+    <RadioGroup
+        android:id="@+id/rg_accommodation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/rb_economic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Econômico"
+            android:checked="true" />
+
+        <RadioButton
+            android:id="@+id/rb_comfort"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Confortável" />
+
+        <RadioButton
+            android:id="@+id/rb_luxury"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Luxuoso" />
+
+    </RadioGroup>
+
+    <!-- Serviços extra -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Serviços"
+        android:layout_marginTop="16dp" />
+
+    <CheckBox
+        android:id="@+id/cb_transport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Transporte" />
+
+    <CheckBox
+        android:id="@+id/cb_food"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Comida" />
+
+    <CheckBox
+        android:id="@+id/cb_tours"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Passeios" />
+
+    <!-- Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="32dp">
+
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Voltar"
+            android:layout_marginEnd="8dp" />
+
+        <Button
+            android:id="@+id/btn_calculate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Calcular"
+            android:layout_marginStart="8dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

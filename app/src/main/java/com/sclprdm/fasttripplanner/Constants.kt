@@ -22,7 +22,7 @@ object Constants {
     const val EXTRA_COST_TOURS_PER_DAY = 120.0
 
     // Tipos de acomodação
-    const val ACCOMMODATION_TYPE_ECONOMIC = "Economic"
-    const val ACCOMMODATION_TYPE_COMFORT = "Comfort"
-    const val ACCOMMODATION_TYPE_LUXURY = "Luxury"
+    const val ACCOMMODATION_TYPE_ECONOMIC = "Economico"
+    const val ACCOMMODATION_TYPE_COMFORT = "Confortavel"
+    const val ACCOMMODATION_TYPE_LUXURY = "Luxuoso"
 }

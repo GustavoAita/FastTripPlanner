@@ -2,9 +2,10 @@ package com.sclprdm.fasttripplanner
 
 import android.os.Bundle
 import android.view.View
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.sclprdm.fasttripplanner.databinding.ActivityMainBinding
+import android.content.Intent
+import com.sclprdm.fasttripplanner.OptionsActivity
 
 
 // MainActivity - tela 1 - dados da viagem
@@ -66,12 +67,7 @@ class MainActivity : AppCompatActivity() {
             return
         }
 
-        // mensagem sucesso (teste)
-        Toast.makeText(
-            this,
-            "Valid! Dest: $destination, Days: $daysStr, Budget: $budgetStr",
-            Toast.LENGTH_LONG
-        ).show()
+        proceedToNextScreen(destination, daysStr.toInt(), budgetStr.toDouble())
     }
 
     private fun isDestinationValid(destination: String): Boolean {
@@ -98,6 +94,15 @@ class MainActivity : AppCompatActivity() {
         binding.tvErrorDestination.visibility = View.GONE
         binding.tvErrorDays.visibility = View.GONE
         binding.tvErrorBudget.visibility = View.GONE
+    }
+
+    private fun proceedToNextScreen(destination: String, days: Int, budget: Double) {
+        val intent = Intent(this, OptionsActivity::class.java).apply {
+            putExtra(Constants.EXTRA_DESTINATION, destination)
+            putExtra(Constants.EXTRA_DAYS, days)
+            putExtra(Constants.EXTRA_BUDGET, budget)
+        }
+        startActivity(intent)
     }
 
     override fun onSaveInstanceState(outState: Bundle) {
