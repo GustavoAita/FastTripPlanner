@@ -59,7 +59,6 @@ class OptionsActivity : AppCompatActivity() {
             proceedToSummary()
         }
     }
-
     private fun getSelectedAccommodation(): String {
         return when (binding.rgAccommodation.checkedRadioButtonId) {
             binding.rbEconomic.id -> Constants.ACCOMMODATION_TYPE_ECONOMIC

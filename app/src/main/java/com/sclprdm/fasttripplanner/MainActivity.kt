@@ -5,8 +5,6 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.sclprdm.fasttripplanner.databinding.ActivityMainBinding
 import android.content.Intent
-import com.sclprdm.fasttripplanner.OptionsActivity
-
 
 // MainActivity - tela 1 - dados da viagem
 class MainActivity : AppCompatActivity() {
