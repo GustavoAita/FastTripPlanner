@@ -19,6 +19,7 @@ class OptionsActivity : AppCompatActivity() {
         private const val KEY_TRANSPORT_CHECKED = "transport_checked"
         private const val KEY_FOOD_CHECKED = "food_checked"
         private const val KEY_TOURS_CHECKED = "tours_checked"
+        private const val KEY_ECONOMIC_CHECKED = "economic_checked"
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,6 +35,11 @@ class OptionsActivity : AppCompatActivity() {
         if (savedInstanceState != null) {
             restoreSavedState(savedInstanceState)
         }
+
+        //if (ecoModeSelected() = true) {
+        //    proceedToSummary()
+        //}
+
 
         // settar botoes
         setupButtonListeners()
@@ -67,6 +73,27 @@ class OptionsActivity : AppCompatActivity() {
             else -> Constants.ACCOMMODATION_TYPE_ECONOMIC
         }
     }
+
+     private fun ecoModeSelected() {
+         val mode = binding.cbModoeconomico.isChecked
+         val accommodation = getSelectedAccommodation()
+         val transport = binding.cbTransport.isChecked
+         val food = binding.cbFood.isChecked
+         val tours = false
+
+         val intent = Intent(this, SummaryActivity::class.java).apply {
+             putExtra((Constants.EXTRA_MODE, mode)
+             putExtra(Constants.EXTRA_DESTINATION, destination)
+             putExtra(Constants.EXTRA_DAYS, days)
+             putExtra(Constants.EXTRA_BUDGET, budget)
+             putExtra(Constants.EXTRA_ACCOMMODATION, accommodation)
+             putExtra(Constants.EXTRA_TRANSPORT, transport)
+             putExtra(Constants.EXTRA_FOOD, food)
+             putExtra(Constants.EXTRA_TOURS, tours)
+         }
+         return false
+     }
+
     private fun proceedToSummary() {
         val accommodation = getSelectedAccommodation()
         val transport = binding.cbTransport.isChecked

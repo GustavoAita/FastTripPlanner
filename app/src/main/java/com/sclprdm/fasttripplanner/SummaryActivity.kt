@@ -18,6 +18,7 @@ class SummaryActivity : AppCompatActivity() {
     private var foodSelected: Boolean = false
     private var toursSelected: Boolean = false
     private var totalCost: Double = 0.0
+     private var ecoMode: Boolean = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -53,6 +54,7 @@ class SummaryActivity : AppCompatActivity() {
         transportSelected = intent.getBooleanExtra(Constants.EXTRA_TRANSPORT, false)
         foodSelected = intent.getBooleanExtra(Constants.EXTRA_FOOD, false)
         toursSelected = intent.getBooleanExtra(Constants.EXTRA_TOURS, false)
+        ecoMode = intent.getBooleanExtra(Constants.EXTRA_MODE, false)
     }
 
     /**
@@ -91,7 +93,12 @@ class SummaryActivity : AppCompatActivity() {
         }
 
         totalCost = accommodatedCost + extrasCost
+
+        if (ecoMode) {
+            totalCost = 0.85*totalCost
+        }
     }
+
 
     //pega as constantes de multiplicador de acomodacao
     private fun getAccommodationMultiplier(accommodationType: String): Double {

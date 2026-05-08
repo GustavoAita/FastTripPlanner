@@ -12,6 +12,13 @@
         android:layout_height="wrap_content"
         android:text="Opções de Viagem" />
 
+    <CheckBox
+        android:id="@+id/cb_modoeconomico"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:checked="false"
+        android:text="Modo Economico" />
+
     <!-- Acomodação -->
     <TextView
         android:layout_width="wrap_content"
@@ -95,5 +102,6 @@
             android:layout_marginStart="8dp" />
 
     </LinearLayout>
+
 
 </LinearLayout>

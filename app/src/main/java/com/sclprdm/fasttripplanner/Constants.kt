@@ -10,6 +10,7 @@ object Constants {
     const val EXTRA_TRANSPORT = "transport"
     const val EXTRA_FOOD = "food"
     const val EXTRA_TOURS = "tours"
+    const val EXTRA_MODE = "mode"
 
     // Multiplicador de acomodação
     const val ACCOMMODATION_ECONOMIC = 1.0
